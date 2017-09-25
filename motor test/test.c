@@ -1,0 +1,15 @@
+#include <LPC213X.H>
+int main(){
+
+IO0DIR=0x000000ff; 
+IO1DIR=0x00000000; 
+	if(((0x00010000&IO1PIN)==0x00000000)){
+	
+	IO0PIN=0x00000005;
+	} 
+	else if(((0x00010001&IO1PIN)==0x00000000)){
+	
+	IO0PIN=0x0000000A;
+	}
+
+}
